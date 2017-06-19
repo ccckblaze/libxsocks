@@ -49,8 +49,14 @@
 
 #endif
 
+#include <map>
+#include <string>
 
 #include "utils/AutoCleanup.h"
 #include "utils/ods.h"
 #include "utils/tstring.h"
 #include "common/CommonDefines.h"
+#include "xsocks.h"
+#include "Tunnel.h"
+#include "th3rd/dns.h"
+#include "socks/SocksMgr.h"
