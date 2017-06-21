@@ -4,16 +4,16 @@ OBJS := $(patsubst %cpp,%o,$(SRCS))
 DEBUG :=
 LFLAGS := $(DEBUG)
 all : $(OBJS)
-	$(CC) -o ./bin/libxsocks $^ -lpthread $(LFLAGS)
+	$(CC) -o ./bin/libxsocks.a $^ -lpthread $(LFLAGS)
 
 %.o: %.cpp
 	$(CC)     -c  $<    -o   $@    -I./src -DLINUX $(DEBUG)
 
 install :
-	cp ./bin/libxsocks /bin/libxsocks
+	cp ./bin/libxsocks.a /bin/libxsocks.a
 
 uninstall :
-	rm /bin/libxsocks
+	rm /bin/libxsocks.a
 
 clean :
 	rm ./src/*.o
